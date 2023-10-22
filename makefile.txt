@@ -1,0 +1,13 @@
+CC = g++
+CFLAGS = -Wall -g -fsanitize=address
+SRC = hw4.cpp
+HEADER = hw4.hpp
+EXECUTABLE = hw4
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SRC) $(HEADER)
+	$(CC) $(CFLAGS) $(SRC) -o $(EXECUTABLE)
+
+clean:
+	rm -f $(EXECUTABLE)
